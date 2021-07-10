@@ -1,0 +1,16 @@
+# Specific .gitignore for `data` directory
+
+# Ignore everything
+*
+
+# except the explaining README
+!README.md
+# and this .gitignore
+!.gitignore
+
+# Do NOT ignore the static directory
+!raw
+# but everything inside it
+raw/*
+# except the README
+!raw/README.md
