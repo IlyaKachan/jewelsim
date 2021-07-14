@@ -9,34 +9,22 @@ of russian jewelery retailers). The data itself includes:
 * *categorical attributes* (metal, category, collection, etc.)
 * *visual data*, i.e. jewel images.
 
-## Environment setup
+## Environment
 
-1. Install **python 3.8.3** (or any newer one), choose an installer for your
-system [here](https://www.python.org/downloads/release/python-373/)
-and follow the [installation guide](https://docs.python.org/3/using/index.html)
-1. Install **virtualenv** and its wrapper for managing python virtual
-environments
-``` bash
-pip install virtualenv
+### Setup
 
-# for Unix-like systems
-pip install virtualenvwrapper
+1. Install [Anaconda with Python 3](https://www.anaconda.com/download/) or
+[Miniconda with Python 3](https://conda.io/miniconda.html)
+and follow the [installation guide](https://docs.python.org/3/using/index.html).
+1. Create `jewelsim` conda environment by invoking `conda env create -f enviromnent.yml`
+1. Activate the environment with `conda activate jewelsim`
 
-# for Windows
-pip install virtualenvwrapper-win
-```
-1. Clone this repo, change directory to *jewelsim* in your terminal,
-create and activate project virtual environment by invoking the commands:
-``` bash
-virtualenv --python=<PATH TO PYTHON 3.8.3 INSTALLATION> venv
-
-# activate venv
-./venv/Scripts/activate 
-```
-1. Install the required python packages into the virtual environment
-``` bash
-pip install -r requirements.txt
-```
+### Update
+1. Activate the environment with `conda activate jewelsim`
+1. Install a new package with `conda install ...`
+1. Update the `environment.yml` file by invoking
+`conda env export --no-builds | grep -v "^prefix: " > environment.yml`
+1. Commit the updates and push them to the remote repository.
 
 ## Project structure
 
