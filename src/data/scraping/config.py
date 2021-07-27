@@ -38,7 +38,7 @@ def get_scraping_output_paths(site):
         CSV feed path and image folder path, respectively.
     """
     site_py = site.replace('.', '_')
-    raw_data_path = Path('data', 'raw_new')
+    raw_data_path = Path('data', 'raw')
     feed_path = Path(raw_data_path, site_py, 'items.csv')
     images_path = Path(raw_data_path, site_py, 'images')
     return str(feed_path), str(images_path)
